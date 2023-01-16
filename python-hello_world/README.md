@@ -1,1 +1,1 @@
-Learning puthon basics
+Learning python basics
