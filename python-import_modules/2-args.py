@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+
+__name__ = "__main__"
+
 """
     print the number and list the arguments
 """
