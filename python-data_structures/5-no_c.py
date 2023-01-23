@@ -9,7 +9,6 @@ def no_c(my_string):
 
     for i in my_string:
         if (i != 'c') and (i != 'C'):
-            a_list.append(i)
             a_str += i
 
     my_string = a_str
