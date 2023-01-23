@@ -4,11 +4,10 @@ def print_matrix_integer(matrix=[[]]):
     Prints a matrix of integers.
     """
 
-    if (len(matrix) <= 1):
-        print()
-        return
-
     for a in matrix:
+        if (len(a) < 1):
+            print()
+            break
         cnt = 1
         for b in a:
             cnt += 1
