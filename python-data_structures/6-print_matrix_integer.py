@@ -18,4 +18,4 @@ def print_matrix_integer(matrix=[[]]):
             else:
                 x = " "
 
-            print("{}".format(b), end=x)
+            print("{:d}".format(b), end=x)
