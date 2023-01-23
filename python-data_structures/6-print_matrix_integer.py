@@ -13,7 +13,7 @@ def print_matrix_integer(matrix=[[]]):
         for b in a:
             cnt += 1
 
-            if (cnt > len(matrix)):
+            if (cnt > len(a)):
                 x = "\n"
             else:
                 x = " "
