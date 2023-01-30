@@ -1,1 +1,1 @@
-some python exercises
+Learning more data types
