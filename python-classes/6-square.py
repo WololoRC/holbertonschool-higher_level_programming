@@ -32,7 +32,9 @@ class Square:
         ValueError:
             if size is < 0.
         """
-        if type(position) == tuple and position[0] >= 0 and position[1] >= 0:
+        p = position
+
+        if type(p) == tuple and len(p) == 2 and p[0] >= 0 and p[1] >= 0:
             self.__position = position
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -115,17 +117,3 @@ class Square:
                     print("#" * self.__size)
         else:
             print()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
