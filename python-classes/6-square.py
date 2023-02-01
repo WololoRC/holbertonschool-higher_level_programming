@@ -72,6 +72,14 @@ class Square:
             ValueError
                 if value < 0
         """
+        if type(p) == tuple and len(p) == 2:
+            for i in p:
+                if type(i) == int and i >= 0:
+                    continue
+                else:
+                    raise TypeError("position must be"
+                                    " a tuple of 2 positive integers")
+
         if type(position) == tuple and position[0] >= 0 and position[1] >= 0:
             self.__position = position
         else:
@@ -115,7 +123,8 @@ class Square:
     def my_print(self):
         """Print the square"""
         if self.__size > 0 and self.__position[1] > 0:
-            print("" * self.__position[1])
+            for i in range(self.__position[1]):
+                print()
         if (self.__size != 0):
             for i in range(self.__size):
                 if self.__position[0] > 0:
