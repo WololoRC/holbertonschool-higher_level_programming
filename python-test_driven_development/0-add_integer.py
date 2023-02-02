@@ -21,7 +21,4 @@ def add_integer(a, b=98):
     elif ((type(b) != int) and (type(b) != float)):
         raise TypeError("b must be an integer")
 
-    result = (int(a) + int(b))
-
-    else:
-        return (int(a) + int(b))
+    return (int(a) + int(b))
