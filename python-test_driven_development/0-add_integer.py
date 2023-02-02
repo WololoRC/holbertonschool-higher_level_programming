@@ -23,8 +23,5 @@ def add_integer(a, b=98):
 
     result = (int(a) + int(b))
 
-    elif (result == float('inf' or result == -floar('inf'))):
-        return 89
-
     else:
         return (int(a) + int(b))
