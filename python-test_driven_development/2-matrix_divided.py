@@ -5,26 +5,24 @@
 
 
 def matrix_divided(matrix, div):
-    """return a new matrix with the values of the last / 2
+    """return a new matrix with the values of the last / 2.
 
     Parameters
     ----------
     matrix : list, int, float
         a list of list with int or float values.
     div: int, float
-        a int or float to divide elements of matrix
+        a int or float to divide elements of matrix.
 
     Raises
     ------
     TypeError
-        if @div != int or float
-        if @matrix is not a list
-        if len @matrix[1] != len(rows] of @matrix
+        if @div != int or float.
+        if @matrix is not a list.
+        if len @matrix[1] != len(rows] of @matrix.
 
     ZeroDivisionError
-        if div == 0
-
-
+        if div == 0.
     """
 
     if type(div) != int and type(div) != float:
@@ -42,8 +40,8 @@ def matrix_divided(matrix, div):
                 try:
                     new.append(list(map(lambda x: round(x / div, 2), a)))
                 except TypeError:
-                    raise ("matrix must be a matrix "
-                           "(list of lists) of integers/floats")
+                    raise TypeError("matrix must be a matrix "
+                                    "(list of lists) of integers/floats")
                     exit()
                 except ZeroDivisionError:
                     raise ZeroDivisionError("division by zero")
