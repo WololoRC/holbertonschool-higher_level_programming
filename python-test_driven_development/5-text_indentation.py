@@ -16,9 +16,6 @@ def text_indentation(text):
     TypeError
         if @text != string
     """
-
-    x = 0
-
     if type(text) is str:
         if text.count(". ") > 0 and text.count(":   ") > 0:
             x = text.replace(". ", ".\n\n")
