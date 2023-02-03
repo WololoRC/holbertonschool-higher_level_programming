@@ -10,7 +10,7 @@ def say_my_name(first_name, last_name=""):
     ----
     first_name: str
         str to print.
-    last_name: str
+    last_name: str ("" by default)
         str to print.
 
     Raises
