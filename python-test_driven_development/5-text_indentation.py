@@ -20,6 +20,6 @@ def text_indentation(text):
         x = text.replace(". ", ".\n\n")
         x = x.replace("? ", "?\n\n")
         x = x.replace(": ", ":\n\n")
-        print(x)
+        print(x, end="")
     else:
         raise TypeError("text must be a string")
