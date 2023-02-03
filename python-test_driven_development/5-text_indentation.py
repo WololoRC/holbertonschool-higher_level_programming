@@ -16,10 +16,19 @@ def text_indentation(text):
     TypeError
         if @text != string
     """
+
+    x = 0
+
     if type(text) is str:
-        x = text.replace(". ", ".\n\n")
-        x = x.replace("? ", "?\n\n")
-        x = x.replace(": ", ":\n\n")
+        if text.count(". ") > 0 and text.count(":   ") > 0:
+            x = text.replace(". ", ".\n\n")
+            x = x.replace("? ", "?\n\n")
+            x = x.replace(": ", ":\n\n")
+        else:
+            x = text.replace(".", ".\n\n")
+            x = x.replace("?", "?\n\n")
+            x = x.replace(":", ":\n\n")
         print(x, end="")
+
     else:
         raise TypeError("text must be a string")
