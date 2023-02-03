@@ -20,7 +20,8 @@ beatiorem! Iam ruinas videres""")
     >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     <BLANKLINE>
-    Quonam modo?
+     Quonam modo?
+    <BLANKLINE>
 
     >>> text_indentation(1024)
     Traceback (most recent call last):
