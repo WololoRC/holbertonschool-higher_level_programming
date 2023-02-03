@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """3-sat_mt_name: holds say_my_name func"""
 
 
