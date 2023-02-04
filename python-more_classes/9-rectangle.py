@@ -65,12 +65,15 @@ class Rectangle:
 
     def __repr__(self):
         """return a string == Rectangle instance"""
-        return str('Rectangle(size, size)')
+        return str('Rectangle(' + str(self.__width) + ', ' +
+                   str(self.__height) + ')')
 
     def __del__(self):
         """you kill my rectangle..."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    """--------------  methods  ------------------"""
 
     def area(self):
         """return the area od a Rectangle instance"""
@@ -104,6 +107,8 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         return eval(str('Rectangle(size, size)'))
+
+    """----------  getters and setters  ------------"""
 
     @property
     def width(self):
