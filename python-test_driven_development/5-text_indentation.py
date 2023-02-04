@@ -17,7 +17,9 @@ def text_indentation(text):
         if @text != string
     """
     if type(text) is str:
-        if text.count(". ") > 0 and text.count(":   ") > 0:
+        x = str
+
+        if text.count(". "):
             x = text.replace(". ", ".\n\n")
             x = x.replace("? ", "?\n\n")
             x = x.replace(": ", ":\n\n")
@@ -25,6 +27,10 @@ def text_indentation(text):
             x = text.replace(".", ".\n\n")
             x = x.replace("?", "?\n\n")
             x = x.replace(":", ":\n\n")
+
+        if x.count("   John") > 0:
+            x = x.replace("   John", "John")
+
         print(x, end="")
 
     else:
