@@ -32,8 +32,12 @@ class Rectangle:
 
     def __str__(self):
         """print a Rectangle instance"""
-        for i in range(self.__height):
-            print("#" * self.__width)
+        if self.__height <= 0 or self.__width <= 0:
+            return ""
+        else:
+            for i in range(self.__height - 1):
+                print("#" * self.__width)
+            print("#" * self.__width, end="")
         return ""
 
     def area(self):
