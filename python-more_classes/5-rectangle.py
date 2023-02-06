@@ -11,7 +11,23 @@ class Rectangle:
         width of a Rectangle instance
     __height : int (0 by default)
         height of a Rectangle instance
+    instance : int
+        num of instances
+
+    Methods
+    -------
+    area:
+        return rectangle area
+    perimeter:
+        return rectangle perimeter
+
+    Raises
+    ------
+    See below...
+
     """
+
+    instances = 0
 
     def __init__(self, width=0, height=0):
         if (type(width) != int):
@@ -23,6 +39,7 @@ class Rectangle:
         elif (width >= 0 and height >= 0):
             self.__height = height
             self.__width = width
+            instances += 1
 
         elif (width < 0):
             raise ValueError("width must be >= 0")
@@ -47,6 +64,7 @@ class Rectangle:
 
     def __del__(self):
         """you kill my rectangle..."""
+        instances -= 1
         print("Bye rectangle...")
 
     def area(self):

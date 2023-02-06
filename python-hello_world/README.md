@@ -1,1 +1,1 @@
-Learning python basics
+Learning python basics, and prove Vim-fugitive

@@ -45,6 +45,9 @@ class Rectangle:
         return str('Rectangle(' + str(self.__width) + ', ' +
                    str(self.__height) + ')')
 
+    def __del__(self):
+        print("Bye rectangle...")
+
     def area(self):
         """return the area od a Rectangle instance"""
         return (self.__height * self.__width)

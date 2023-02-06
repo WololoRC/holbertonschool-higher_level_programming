@@ -1,0 +1,30 @@
+Trying:
+    text_indentation = __import__('5-text_indentation').text_indentation
+Expecting nothing
+ok
+Trying:
+    text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
+Expecting:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Quonam modo?
+ok
+Trying:
+    text_indentation(1024)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+ok
+Trying:
+    text_indentation()
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+ok
+1 items passed all tests:
+   4 tests in 5-text_indentation.txt
+4 tests in 1 items.
+4 passed and 0 failed.
+Test passed.
