@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Holads BaseGeometry class"""
+"""Holad BaseGeometry class"""
 
 
 class BaseGeometry():
