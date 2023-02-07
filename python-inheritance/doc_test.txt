@@ -1,0 +1,50 @@
+Trying:
+    MyList = __import__('1-my_list').MyList
+Expecting nothing
+ok
+Trying:
+    my_list = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    []
+ok
+Trying:
+    my_list.append('c')
+Expecting nothing
+ok
+Trying:
+    my_list.append('d')
+Expecting nothing
+ok
+Trying:
+    my_list.append('a')
+Expecting nothing
+ok
+Trying:
+    my_list.append('e')
+Expecting nothing
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    ['a', 'c', 'd', 'e']
+ok
+Trying:
+    my_list = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list.append(Wololo, Ayolo)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Wololo' is not defined
+ok
+1 items passed all tests:
+  10 tests in 1-my_list.txt
+10 tests in 1 items.
+10 passed and 0 failed.
+Test passed.
