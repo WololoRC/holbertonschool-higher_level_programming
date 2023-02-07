@@ -39,4 +39,9 @@ Using ``print_sorted``
     [-1, 0, 1, 2]
     False
 
+    >>> print(my_list) is my_list.print_sorted()
+    [2, 1, 0, -1]
+    [-1, 0, 1, 2]
+    True
+
 
