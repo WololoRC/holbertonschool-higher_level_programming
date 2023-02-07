@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""holds MyList class"""
+
 
 class MyList(list):
     """A list sub-class"""
