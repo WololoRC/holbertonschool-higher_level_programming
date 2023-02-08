@@ -60,7 +60,7 @@ Using ``integer_validator`` public method
     TypeError: age must be an integer
 
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("age", (3, 4))
+    >>> bg.integer_validator("age", {3, 4})
     Traceback (most recent call last):
     ...
     TypeError: age must be an integer
