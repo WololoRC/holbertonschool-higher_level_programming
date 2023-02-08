@@ -1,5 +1,14 @@
 #!/usr/bin/python3
-"""Holad BaseGeometry class"""
+"""
+BaseGeometry : class
+    work in progess
+
+    methods
+    -------
+    area
+        do nothing yes
+
+"""
 
 
 class BaseGeometry():
