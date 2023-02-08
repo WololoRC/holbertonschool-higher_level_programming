@@ -1,0 +1,30 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``integer_validator`` public method
+-------------------
+
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Jhon", "Snow")
+    Traceback (most recent call last):
+    ...
+    TypeError: Jhon must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Jhon", 89)
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Jhon", -89)
+    Traceback (most recent call last):
+    ...
+    ValueError: Jhon must be greater than 0
