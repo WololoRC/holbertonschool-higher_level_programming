@@ -12,7 +12,7 @@ Using ``integer_validator`` public method
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("Jhon", "Snow")
