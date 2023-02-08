@@ -6,4 +6,4 @@ class BaseGeometry():
     """Documentation in progress"""
     def area(self):
         """Documentation in progress"""
-        return Exception("area() is not implemented")
+        return Exception("[Exception] area() is not implemented")
