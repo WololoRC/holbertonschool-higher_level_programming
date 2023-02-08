@@ -15,7 +15,7 @@ class BaseGeometry():
 
         if type(value) is int:
             if value > 0:
-                self.__value = int
+                return value
             else:
                 raise ValueError(f"{name} must be greater than 0")
         else:
