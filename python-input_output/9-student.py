@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+"""Hols: student class"""
+
+
+class Student():
+    """
+    A Student
+
+    Atributes
+    ---------
+    first_name : str
+        his name
+
+    last_name : str
+        his last name
+
+    age : int
+        his age
+
+    Methods
+    -------
+    to_json:
+        see below...
+    """
+
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self):
+        """Return __dict__ for json pruposites"""
+        return self.__dict__
