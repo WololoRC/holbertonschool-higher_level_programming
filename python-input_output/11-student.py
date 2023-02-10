@@ -40,6 +40,6 @@ class Student():
     def reload_from_json(self, json):
         """From a json file replace the attributes of a student"""
         if len(dic) > 0:
-            self.first_name = json.get('name')
+            self.first_name = json.get('first_name')
             self.last_name = json.get('last_name')
             self.age = json.get('age')
