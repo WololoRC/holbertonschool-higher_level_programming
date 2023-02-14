@@ -11,6 +11,18 @@ class Rectangle(Base):
 
     Attributes
     ----------
+    height : int
+        height of Rectangle
+
+    width : int
+        width of Rectangle
+
+    Methods:
+    area : public
+        returns area (width * height)
+
+    display : public
+        display a rectangle
 
     """
 
@@ -45,6 +57,23 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
+
+    def __str__(self):
+        return (f"[Rectangle] ({self.id}) {self.x}"
+                f"/{self.y} - {self.__width}/{self.__height}")
+
+    def area(self):
+        """area returns"""
+        return self.__width * self.__height
+
+    def display(self):
+        """displat my rectangle"""
+        print("\n" * self.__y, end="")
+        for i in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
+
+    def update(self, *args):
+        """update instance attributes"""
 
     """
     getters and setters from here
