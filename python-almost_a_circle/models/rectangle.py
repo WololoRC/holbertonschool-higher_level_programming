@@ -74,6 +74,14 @@ class Rectangle(Base):
 
     def update(self, *args):
         """update instance attributes"""
+        try:
+            super().__init__(args[0])
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+        except Exception:
+            pass
 
     """
     getters and setters from here
