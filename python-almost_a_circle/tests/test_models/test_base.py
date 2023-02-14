@@ -4,6 +4,7 @@
 import unittest
 from models.base import Base
 
+
 class testBase(unittest.TestCase):
     """test my base class"""
     def test_is_instance(self):
@@ -25,7 +26,6 @@ class testBase(unittest.TestCase):
         """new instance + 1 id?"""
         instance2 = Base()
         self.assertEqual(instance2.id, 3)
-
 
 
 if __name__ == "__main__":
