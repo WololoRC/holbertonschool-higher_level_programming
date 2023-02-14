@@ -5,7 +5,7 @@ import unittest
 from models.base import Base
 
 
-class testBase(unittest.TestCase):
+class Test_classBase(unittest.TestCase):
     """test my base class"""
     def test_is_instance(self):
         """Class exist?"""
@@ -27,6 +27,5 @@ class testBase(unittest.TestCase):
         instance2 = Base()
         self.assertEqual(instance2.id, 3)
 
-
 if __name__ == "__main__":
-    unittest.main(verbosity=2)
+    unittest.main()
