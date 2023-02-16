@@ -17,12 +17,16 @@ class Rectangle(Base):
     width : int
         width of Rectangle
 
-    Methods:
+    Methods
+    -------
     area : public
         returns area (width * height)
 
     display : public
         display a rectangle
+
+    update : public
+        update instance attributes
 
     """
 
@@ -72,7 +76,7 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update instance attributes"""
         try:
             super().__init__(args[0])
@@ -80,6 +84,15 @@ class Rectangle(Base):
             self.__height = args[2]
             self.__x = args[3]
             self.__y = args[4]
+        except Exception:
+            pass
+
+        try:
+            self.id = kwargs.get('id', self.id)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.width)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs('y', self.y)
         except Exception:
             pass
 
