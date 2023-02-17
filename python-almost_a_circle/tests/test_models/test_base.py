@@ -10,6 +10,7 @@ class Test_classBase(unittest.TestCase):
         """Class exist?"""
         instance1 = Base()
         self.assertTrue(isinstance(instance1, Base))
+
     def test_id(self):
         """id without declarations"""
         instance1 = Base()
