@@ -28,6 +28,9 @@ class Rectangle(Base):
     update : public
         update instance attributes
 
+    to_dictionary : public
+        return a dict representation of the instance
+
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -56,15 +59,23 @@ class Rectangle(Base):
             else:
                 pass
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.x = x
+        self.y = y
         super().__init__(id)
+        self.height = height
+        self.width = width
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.x}"
-                f"/{self.y} - {self.__width}/{self.__height}")
+                f"/{self.y} - {self.width}/{self.height}")
+
+    def to_dictionary(self):
+        """return a dict representations of instance"""
+        key_names = ['x', 'y', 'id', 'height', 'width']
+        new_dic = {}
+        for i, j in enumerate(self.__dict__.values()):
+            new_dic.update({key_names[i]: j})
+        return new_dic
 
     def area(self):
         """area returns"""
@@ -80,10 +91,10 @@ class Rectangle(Base):
         """update instance attributes"""
         try:
             super().__init__(args[0])
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
         except Exception:
             pass
 
@@ -92,13 +103,11 @@ class Rectangle(Base):
             self.width = kwargs.get('width', self.width)
             self.height = kwargs.get('height', self.width)
             self.x = kwargs.get('x', self.x)
-            self.y = kwargs('y', self.y)
+            self.y = kwargs.get('y', self.y)
         except Exception:
             pass
 
-    """
-    getters and setters from here
-    """
+    # getters/setters section #
     @property
     def width(self):
         return self.__width
@@ -157,6 +166,4 @@ class Rectangle(Base):
                 self.__y = value
         else:
             raise TypeError("y must be and integer")
-    """
-    end of getters/setters sections
-    """
+    # end of getters/setters section #

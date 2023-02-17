@@ -9,6 +9,8 @@ class Square(Rectangle):
 
     Methods and Attributes
     inherits from Rectangle Class
+
+    some methods are Square versions from Rectangle methods
     """
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
@@ -37,7 +39,16 @@ class Square(Rectangle):
             except Exception:
                 pass
 
-    """getter and setter"""
+    def to_dictionary(self):
+        """return a dict representations of instance"""
+        new_dict = {}
+        new_dict.update({'id': self.__dict__.get('id')})
+        new_dict.update({'x': self.__dict__.get('_Rectangle__x')})
+        new_dict.update({'size': self.__dict__.get('_Rectangle__width')})
+        new_dict.update({'y': self.__dict__.get('_Rectangle__y')})
+        return new_dict
+
+    # getter/setter section #
     @property
     def size(self):
         return self.width
@@ -45,4 +56,4 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         super().__init__(value, value)
-    """end of getter/setter section"""
+    # end of getter/setter section #
