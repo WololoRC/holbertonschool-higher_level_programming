@@ -63,11 +63,12 @@ class Test_classBase(unittest.TestCase):
         self.assertEqual(return_test, [])
 
         """Is the dict?"""
-        return_test = x.from_json_string('[{ "id": 89 }]')
-        self.assertTrue(return_test == [{ "id": 89 }])
+        return_test = x.from_json_string('[{"id": 89}]')
+        self.assertTrue(return_test == [{"id": 89}])
 
         """is the list?"""
         self.assertTrue(type(return_test) is list)
+
 
 if __name__ == "__main__":
     unittest.main()
