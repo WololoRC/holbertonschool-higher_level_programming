@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """base test"""
-
 import unittest
 from models.base import Base
 
@@ -11,10 +10,10 @@ class Test_classBase(unittest.TestCase):
         """Class exist?"""
         instance1 = Base()
         self.assertTrue(isinstance(instance1, Base))
-
     def test_id(self):
         """id without declarations"""
         instance1 = Base()
+        self.assertEqual(instance1.id, 3)
         self.assertEqual(instance1.id, 3)
 
     def test_passing_id(self):
@@ -23,12 +22,13 @@ class Test_classBase(unittest.TestCase):
         self.assertEqual(instance1.id, 5)
 
     def test_new_instance(self):
+        """new instance + 1 id?"""
         """new instance how many id's?"""
         instance2 = Base()
         self.assertEqual(instance2.id, 5)
+        self.assertEqual(instance2.id, 5)
 
     def test_base_to_json_str(self):
-        """tests on base to json stirng"""
         x = Base()
 
         """None == []"""
