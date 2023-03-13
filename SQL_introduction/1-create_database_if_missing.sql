@@ -1,3 +1,2 @@
--- creates a database
-DROP DATABASE hbtn_0c_0;
-CREATE DATABASE hbtn_0c_0;
+-- creates a database if not exists
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
