@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Create a Session instance and made a SELECT * query"""
-
+""" Create a Session instance and made a SELECT * query
+"""
 
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
