@@ -15,9 +15,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    try:
-        for record in session.query(State).filter(State.id==1):
-            print(f"{record.id}: {record.name}")
+    record = session.query(State).filter(State.id==1).one_or_none()
 
-    except Exception:
+    if record is None:
         print('Nothing')
+
+    else:
+        print(f"{record.id}: {record.name}")
