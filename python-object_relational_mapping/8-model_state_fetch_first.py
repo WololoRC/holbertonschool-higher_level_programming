@@ -15,5 +15,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for record in session.query(State).filter(State.id==1):
-        print(f"{record.id}: {record.name}")
+    try:
+        for record in session.query(State).filter(State.id==1):
+            print(f"{record.id}: {record.name}")
+
+    except Exception:
+        print('Nothing')
