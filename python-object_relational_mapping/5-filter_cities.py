@@ -38,4 +38,5 @@ if __name__ == "__main__":
         print()
 
     except TypeError:
+        print()
         quit()
