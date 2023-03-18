@@ -1,8 +1,2 @@
 -- List all comedy shows
-SELECT sh.title
-FROM tv_shows sh
-INNER JOIN tv_show_genres
-INNER JOIN tv_genres
-ON sh.id = tv_show_genres.show_id AND tv_genres.id = tv_show_genres.genre_id
-WHERE tv_genres.name = 'Comedy'
-ORDER BY title;
+SELECT tv_shows.title FROM tv_shows INNER JOIN tv_show_genres tsg INNER JOIN tv_genres tg ON tg.id=tsg.genre_id AND tv_shows.id=tsg.show_id WHERE tg.name="Comedy" ORDER BY tv_shows.title;
