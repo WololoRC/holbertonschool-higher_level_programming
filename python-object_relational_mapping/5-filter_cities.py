@@ -19,22 +19,23 @@ if __name__ == "__main__":
                     "cities.state_id=states.id WHERE " +
                     "states.name=%s", (argv[4], ))
 
+
+        rows = (cur.fetchall())
+
+        for row in rows:
+            if unpack:
+                unpack = unpack + row
+            else:
+                unpack = row
+
+        for item in unpack:
+            if cnt != 0 and item is not None:
+                print(", ", end="")
+
+            print(f"{item}", end="")
+            cnt = cnt + 1
+
+        print()
+
     except TypeError:
         quit()
-
-    rows = (cur.fetchall())
-
-    for row in rows:
-        if unpack:
-            unpack = unpack + row
-        else:
-            unpack = row
-
-    for item in unpack:
-        if cnt != 0 and item is not None:
-            print(", ", end="")
-
-        print(f"{item}", end="")
-        cnt = cnt + 1
-
-    print()
