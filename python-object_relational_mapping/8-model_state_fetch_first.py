@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    record = session.query(State).filter(State.id==1).one_or_none()
+    record = session.query(State).filter(State.id == 1).one_or_none()
 
     if record is None:
         print('Nothing')
