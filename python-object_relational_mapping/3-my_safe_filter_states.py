@@ -10,12 +10,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    if (len(argv[4]) <= 10):
-        cur.execute(
-                "SELECT * FROM states WHERE BINARY name='{}'".format(argv[4]))
-        rows = (cur.fetchall())
-        for row in rows:
-            print(row)
-
-    else:
-        print('nope')
+    cur.execute("SELECT * FROM states WHERE BINARY name=%s", (argv[4],))
+    rows = (cur.fetchall())
+    for row in rows:
+        print(row)
