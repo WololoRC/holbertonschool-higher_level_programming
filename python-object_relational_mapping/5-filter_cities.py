@@ -13,10 +13,17 @@ if __name__ == "__main__":
     unpack = 0
     cnt = 0
 
-    cur.execute("SELECT cities.name FROM cities" +
-                " LEFT JOIN states ON " +
-                "cities.state_id=states.id WHERE states.name=%s", (argv[4], ))
+    try:
+        cur.execute("SELECT cities.name FROM cities" +
+                    " LEFT JOIN states ON " +
+                    "cities.state_id=states.id WHERE " +
+                    "states.name=%s", (argv[4], ))
+
+    except TypeError:
+        quit()
+
     rows = (cur.fetchall())
+
     for row in rows:
         if unpack:
             unpack = unpack + row
