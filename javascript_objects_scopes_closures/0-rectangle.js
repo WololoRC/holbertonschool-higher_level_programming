@@ -2,8 +2,8 @@
 // Defines a Rectangle
 
 class Rectangle {
-    constructor(){
-    }
+  constructor () {
+  }
 }
 
 module.exports = Rectangle;
