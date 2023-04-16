@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // Defines a Square object who inherits from Rectangle
 
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-square');
 
 class Square extends Rectangle {
   constructor (w) {
