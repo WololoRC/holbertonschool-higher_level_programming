@@ -4,6 +4,6 @@
 let cnt = 0;
 
 exports.logMe = function (item) {
-  console.log(cnt.toString(), ':', item);
+  console.log(cnt + ': ' + item);
   cnt++;
 };
